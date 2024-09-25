@@ -28,3 +28,9 @@ jobs:
       uses: codecov/codecov-action@v3
       env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@4
+      with:
+        name: Package
+        path: build/libs
+      
